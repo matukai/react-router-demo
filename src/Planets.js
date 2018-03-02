@@ -35,9 +35,10 @@ class Planets extends Component {
       <Switch>
         <Route exact path="/planets" render={() => {
           return (
-            <PlanetsList planets={this.state.planets}/>
+            <PlanetsList  planets={this.state.planets}/>
           );
         }} />
+        {/* Link to planet id */}
         <Route exact path="/planets/:id" component={Planet}/>
 
 

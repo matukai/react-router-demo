@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PlanetsList = props => {
   return(
@@ -8,7 +9,7 @@ const PlanetsList = props => {
         const planetId = planet.url.split('/').slice(-2, -1).pop();
         return(
           <div key={planetId} className="planet-link">
-            {planet.name}
+            <Link to={`/planets/${planetId}`}>{planet.name}</Link>
           </div>
         );
       })
