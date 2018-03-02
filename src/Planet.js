@@ -9,7 +9,8 @@ class Planet extends Component {
 
   componentWillMount() {
     console.log('componentsWillMount')
-    const planetId = 0;
+    console.log(this.props.match)
+    const planetId = this.props.match.params.id;
     if(planetId) {
       return fetch(`https://swapi.co/api/planets/${planetId}`)
         .then(response => {
